@@ -54,17 +54,17 @@ export default function Header({ activeSection }: HeaderProps) {
         transition={{ type: "spring", stiffness: 100, damping: 20, delay: 1.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "glass-panel rounded-none border-b-2 border-b-[var(--color-neon-magenta)] py-3.5 shadow-[0_4px_0_0_rgba(0,0,0,1)] bg-[var(--color-wall-dark)]/95"
-            : "bg-transparent py-6"
+            ? "glass-panel rounded-none border-b-2 border-b-[var(--color-neon-magenta)] py-3 shadow-[0_4px_0_0_rgba(0,0,0,1)] bg-[var(--color-wall-dark)]/95"
+            : "bg-transparent py-5"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-4 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-4 md:px-8">
           <div className="flex items-center justify-between gap-6 w-full">
             {/* Left Brand Badge */}
-            <div className="hidden md:flex items-center">
+            <div className="hidden md:flex items-center shrink-0">
               <button
                 onClick={() => scrollToSection("overview")}
-                className="flex items-center gap-2 px-3.5 py-1.5 bg-black border-2 border-[var(--color-neon-magenta)] text-white font-extrabold text-xs tracking-widest uppercase shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:bg-[var(--color-neon-magenta)] hover:text-black transition-all cursor-pointer"
+                className="flex items-center gap-2 px-3.5 h-10 bg-black border-2 border-[var(--color-neon-magenta)] text-white font-extrabold text-xs tracking-widest uppercase shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:bg-[var(--color-neon-magenta)] hover:text-black transition-all cursor-pointer"
               >
                 <span className="text-[var(--color-acid-yellow)]">YKS</span>
                 <span className="text-[10px] text-slate-400 font-mono">PORTFOLIO</span>
@@ -80,7 +80,7 @@ export default function Header({ activeSection }: HeaderProps) {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
-                      className={`relative px-4 lg:px-5 py-2 rounded-none font-display text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer ${
+                      className={`relative px-4 lg:px-5 h-8 flex items-center justify-center rounded-none font-display text-xs font-bold tracking-wider uppercase transition-colors cursor-pointer ${
                         isActive ? "text-black" : "text-white hover:text-[var(--color-neon-cyan)]"
                       }`}
                     >
@@ -99,16 +99,16 @@ export default function Header({ activeSection }: HeaderProps) {
             </div>
 
             {/* Action Buttons (Right) */}
-            <div className="hidden md:flex items-center justify-end gap-3.5">
+            <div className="hidden md:flex items-center justify-end gap-3 shrink-0">
               <Magnetic intensity={0.2}>
                 <a
                   href={resumeData.github}
                   target="_blank"
                   rel="noreferrer referrer"
-                  className="p-2.5 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
+                  className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
                   aria-label="GitHub Profile"
                 >
-                  <Github size={17} />
+                  <Github size={18} />
                 </a>
               </Magnetic>
               <Magnetic intensity={0.2}>
@@ -116,10 +116,10 @@ export default function Header({ activeSection }: HeaderProps) {
                   href={resumeData.linkedin}
                   target="_blank"
                   rel="noreferrer referrer"
-                  className="p-2.5 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
+                  className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
                   aria-label="LinkedIn Profile"
                 >
-                  <Linkedin size={17} />
+                  <Linkedin size={18} />
                 </a>
               </Magnetic>
               {resumeData.instagram && (
@@ -128,10 +128,10 @@ export default function Header({ activeSection }: HeaderProps) {
                     href={resumeData.instagram}
                     target="_blank"
                     rel="noreferrer referrer"
-                    className="p-2.5 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
+                    className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
                     aria-label="Instagram Profile"
                   >
-                    <Instagram size={17} />
+                    <Instagram size={18} />
                   </a>
                 </Magnetic>
               )}
@@ -141,10 +141,10 @@ export default function Header({ activeSection }: HeaderProps) {
                     href={resumeData.youtube}
                     target="_blank"
                     rel="noreferrer referrer"
-                    className="p-2.5 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
+                    className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-cyan)] hover:text-[var(--color-neon-cyan)] shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
                     aria-label="YouTube Channel"
                   >
-                    <Youtube size={17} />
+                    <Youtube size={18} />
                   </a>
                 </Magnetic>
               )}
@@ -152,7 +152,7 @@ export default function Header({ activeSection }: HeaderProps) {
               <Magnetic intensity={0.1}>
                 <a
                   href={`mailto:${resumeData.email}`}
-                  className="flex items-center gap-2 px-5 py-2.5 bg-[var(--color-neon-magenta)] text-white hover:bg-[var(--color-deep-purple)] border-2 border-black text-xs uppercase font-extrabold tracking-wider rounded-none shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
+                  className="h-10 px-5 flex items-center justify-center gap-2 shrink-0 bg-[var(--color-neon-magenta)] text-white hover:bg-[var(--color-deep-purple)] border-2 border-black text-xs uppercase font-extrabold tracking-wider rounded-none shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
                 >
                   <Mail size={15} className="text-[var(--color-acid-yellow)]" />
                   <span>Contact</span>
@@ -164,7 +164,7 @@ export default function Header({ activeSection }: HeaderProps) {
             <div className="flex md:hidden items-center gap-2 ml-auto">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2.5 text-white hover:text-[var(--color-neon-magenta)] bg-black border-2 border-white rounded-none cursor-pointer transition-colors flex items-center justify-center shadow-[3px_3px_0_0_rgba(0,0,0,1)]"
+                className="w-10 h-10 flex items-center justify-center shrink-0 text-white hover:text-[var(--color-neon-magenta)] bg-black border-2 border-white rounded-none cursor-pointer transition-colors shadow-[3px_3px_0_0_rgba(0,0,0,1)]"
                 aria-label="Toggle Menu"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -209,7 +209,7 @@ export default function Header({ activeSection }: HeaderProps) {
                     href={resumeData.github}
                     target="_blank"
                     rel="noreferrer referrer"
-                    className="p-2.5 rounded-none bg-black border-2 border-[var(--color-neon-magenta)] text-[var(--color-neon-magenta)] hover:bg-[var(--color-neon-magenta)] hover:text-black transition-colors"
+                    className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-[var(--color-neon-magenta)] text-[var(--color-neon-magenta)] hover:bg-[var(--color-neon-magenta)] hover:text-black transition-colors"
                   >
                     <Github size={18} />
                   </a>
@@ -217,7 +217,7 @@ export default function Header({ activeSection }: HeaderProps) {
                     href={resumeData.linkedin}
                     target="_blank"
                     rel="noreferrer referrer"
-                    className="p-2.5 rounded-none bg-black border-2 border-[var(--color-neon-cyan)] text-[var(--color-neon-cyan)] hover:bg-[var(--color-neon-cyan)] hover:text-black transition-colors"
+                    className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-[var(--color-neon-cyan)] text-[var(--color-neon-cyan)] hover:bg-[var(--color-neon-cyan)] hover:text-black transition-colors"
                   >
                     <Linkedin size={18} />
                   </a>
@@ -226,7 +226,7 @@ export default function Header({ activeSection }: HeaderProps) {
                       href={resumeData.instagram}
                       target="_blank"
                       rel="noreferrer referrer"
-                      className="p-2.5 rounded-none bg-black border-2 border-[var(--color-spray-orange)] text-[var(--color-spray-orange)] hover:bg-[var(--color-spray-orange)] hover:text-black transition-colors"
+                      className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-[var(--color-spray-orange)] text-[var(--color-spray-orange)] hover:bg-[var(--color-spray-orange)] hover:text-black transition-colors"
                     >
                       <Instagram size={18} />
                     </a>
@@ -236,7 +236,7 @@ export default function Header({ activeSection }: HeaderProps) {
                       href={resumeData.youtube}
                       target="_blank"
                       rel="noreferrer referrer"
-                      className="p-2.5 rounded-none bg-black border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-colors"
+                      className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-colors"
                     >
                       <Youtube size={18} />
                     </a>
@@ -245,7 +245,7 @@ export default function Header({ activeSection }: HeaderProps) {
 
                 <a
                   href={`mailto:${resumeData.email}`}
-                  className="flex items-center gap-2 px-5 py-2.5 bg-[var(--color-acid-yellow)] text-xs font-bold uppercase rounded-none border-2 border-black text-black shadow-[2px_2px_0_0_rgba(0,0,0,1)]"
+                  className="h-10 px-5 flex items-center justify-center gap-2 bg-[var(--color-acid-yellow)] text-xs font-bold uppercase rounded-none border-2 border-black text-black shadow-[2px_2px_0_0_rgba(0,0,0,1)]"
                 >
                   <Mail size={14} />
                   <span>Get in Touch</span>

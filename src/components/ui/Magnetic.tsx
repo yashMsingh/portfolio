@@ -4,9 +4,10 @@ import { motion } from "motion/react";
 interface MagneticProps {
   children: ReactElement;
   intensity?: number;
+  className?: string;
 }
 
-export default function Magnetic({ children, intensity = 0.3 }: MagneticProps) {
+export default function Magnetic({ children, intensity = 0.3, className = "" }: MagneticProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -30,7 +31,7 @@ export default function Magnetic({ children, intensity = 0.3 }: MagneticProps) {
       onMouseLeave={reset}
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-      className="inline-block"
+      className={`inline-flex items-center shrink-0 ${className}`}
     >
       {children}
     </motion.div>
