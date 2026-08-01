@@ -1,0 +1,17 @@
+import { motion, useScroll, useSpring } from "motion/react";
+
+export default function ScrollProgress() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  return (
+    <motion.div
+      className="fixed top-0 left-0 right-0 h-[4px] bg-gradient-to-r from-[var(--color-neon-magenta)] via-[var(--color-acid-yellow)] to-[var(--color-neon-cyan)] origin-left z-[9998] shadow-[0_2px_10px_var(--color-neon-magenta)]"
+      style={{ scaleX }}
+    />
+  );
+}

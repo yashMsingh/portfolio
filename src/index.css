@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Graffiti Fonts added via index.html */
+  --font-graffiti-hero: "Bungee Shade", "Impact", sans-serif;
+  --font-graffiti-heading: "Bangers", "Impact", sans-serif;
+
+  /* Graffiti / Street Art Color Palette */
+  --color-wall-dark: #2b2b2e; /* dark concrete */
+  --color-wall-mid: #3a3538;  /* mid concrete */
+  --color-wall-light: #524d50;
+  
+  --color-neon-magenta: #ff2ec4;
+  --color-neon-cyan: #00e5ff;
+  --color-acid-yellow: #f9f002;
+  --color-spray-orange: #ff6a00;
+  --color-deep-purple: #7b2ff7;
+  
+  /* Mapping brand colors to the new palette to keep component structures unbroken where possible */
+  --color-brand-bg: var(--color-wall-dark);
+  --color-brand-card: var(--color-wall-mid);
+  --color-brand-border: rgba(255, 255, 255, 0.15);
+  --color-brand-cyan: var(--color-neon-cyan);
+  --color-brand-blue: var(--color-deep-purple);
+  --color-brand-purple: var(--color-neon-magenta);
+  --color-brand-indigo: var(--color-spray-orange);
+}
+
+@layer base {
+  body {
+    background-color: var(--color-wall-dark);
+    color: #e5e5e5;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: var(--color-neon-magenta);
+    color: #fff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-wall-dark);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-spray-orange);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-neon-magenta);
+  }
+}
+
+/* Utilities for Graffiti Theme */
+
+.graffiti-heading {
+  font-family: var(--font-graffiti-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #fff;
+  text-shadow: 
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    3px 3px 0 var(--color-neon-magenta),
+    4px 4px 0 var(--color-neon-magenta);
+}
+
+.graffiti-hero-text {
+  font-family: var(--font-graffiti-hero);
+  text-transform: uppercase;
+  color: var(--color-acid-yellow);
+  text-shadow: 
+    3px 3px 0px #000,
+    5px 5px 0px var(--color-deep-purple);
+}
+
+/* Glass panel adapted to concrete backgrounds */
+.glass-panel {
+  background: rgba(43, 43, 46, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 46, 196, 0.5); /* magenta border */
+  box-shadow: 0 12px 40px rgba(255, 46, 196, 0.15);
+  transform: translateY(-2px);
+}
+
+.dark-section .glass-panel,
+.dark-panel {
+  background: rgba(43, 43, 46, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.6);
+}
+
+.dark-section .glass-panel:hover {
+  background: rgba(58, 53, 56, 0.95);
+  border-color: var(--color-neon-cyan);
+  box-shadow: 0 16px 35px -10px rgba(0, 229, 255, 0.25);
+}
+
+/* Torn Edge Divider */
+.torn-edge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: var(--color-wall-mid);
+  clip-path: polygon(
+    0% 100%, 
+    100% 100%, 
+    100% 0%, 
+    95% 40%, 
+    90% 10%, 
+    85% 50%, 
+    80% 20%, 
+    75% 60%, 
+    70% 10%, 
+    65% 40%, 
+    60% 0%, 
+    55% 50%, 
+    50% 20%, 
+    45% 60%, 
+    40% 10%, 
+    35% 50%, 
+    30% 0%, 
+    25% 40%, 
+    20% 10%, 
+    15% 50%, 
+    10% 20%, 
+    5% 60%, 
+    0% 0%
+  );
+  transform: translateY(100%);
+  z-index: 10;
+}
+
+/* Spray reveal animation */
+.spray-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.spray-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: currentColor;
+  opacity: 0;
+  transition: opacity 0.3s;
+  mask-image: radial-gradient(circle, white, transparent);
+  -webkit-mask-image: radial-gradient(circle, white, transparent);
+  mask-size: 0% 0%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  transition: mask-size 0.4s ease-out, -webkit-mask-size 0.4s ease-out;
+  z-index: -1;
+}
+
+.spray-reveal:hover::before {
+  opacity: 0.15;
+  mask-size: 300% 300%;
+  -webkit-mask-size: 300% 300%;
+}
+
+/* SVG Drip utility */
+.drip-svg {
+  filter: drop-shadow(0px 5px 3px rgba(0,0,0,0.5));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
