@@ -34,7 +34,7 @@ export default function Skills() {
             <span>Technical Capabilities</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight graffiti-heading">
-            Skill <span className="text-[var(--color-neon-magenta)]">Taxonomy</span>
+            Skill <span className="text-[var(--color-neon-green)]">Taxonomy</span>
           </h2>
           <p className="text-sm text-slate-300 max-w-lg font-sans font-medium">
             Meticulously mapped technical framework layers spanning full-stack architectures and machine learning systems.
@@ -73,10 +73,10 @@ export default function Skills() {
                       key={skill}
                       className="flex items-center justify-between group/item"
                     >
-                      <span className="text-slate-300 text-xs font-mono tracking-tight font-semibold group-hover/item:text-[var(--color-neon-magenta)] transition-colors">
+                      <span className="text-slate-300 text-xs font-mono tracking-tight font-semibold group-hover/item:text-[var(--color-neon-green)] transition-colors">
                         {skill}
                       </span>
-                      <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover/item:bg-[var(--color-neon-magenta)] transition-colors" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-slate-600 group-hover/item:bg-[var(--color-neon-green)] transition-colors" />
                     </div>
                   ))}
                 </div>

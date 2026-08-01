@@ -21,7 +21,7 @@ export default function Credentials() {
   };
 
   const getCertificationBadgeGlow = (idx: number) => {
-    return "border-l-4 border-[var(--color-neon-magenta)] hover:border-[var(--color-neon-cyan)]";
+    return "border-l-4 border-[var(--color-neon-green)] hover:border-[var(--color-neon-cyan)]";
   };
 
   return (
@@ -64,14 +64,14 @@ export default function Credentials() {
                         <p className="text-xs text-slate-400 mt-1 font-mono font-bold uppercase tracking-tight">{edu.degree}</p>
                       </div>
                       <div className="flex flex-col items-start sm:items-end text-xs font-mono text-slate-300 shrink-0 font-bold">
-                        <span className="text-[var(--color-neon-magenta)]">{edu.duration}</span>
+                        <span className="text-[var(--color-neon-cyan)]">{edu.duration}</span>
                         <span>{edu.location}</span>
                       </div>
                     </div>
 
                     {/* CGPA display */}
                     {edu.cgpa && (
-                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-none bg-[var(--color-neon-magenta)] text-white text-xs font-mono font-bold mb-4 shadow-[2px_2px_0_0_rgba(0,0,0,1)] border-2 border-black">
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-none bg-[var(--color-neon-cyan)] text-black text-xs font-mono font-bold mb-4 shadow-[2px_2px_0_0_rgba(0,0,0,1)] border-2 border-black">
                         <span>{edu.cgpa}</span>
                       </div>
                     )}
@@ -122,7 +122,7 @@ export default function Credentials() {
                     <span>Leadership & Activities</span>
                   </div>
                   <h2 className="text-4xl sm:text-5xl font-bold tracking-tight graffiti-heading">
-                    Beyond <span className="text-[var(--color-neon-magenta)]">Engineering</span>
+                    Beyond <span className="text-[var(--color-neon-green)]">Engineering</span>
                   </h2>
                 </div>
 
@@ -137,12 +137,12 @@ export default function Credentials() {
                           <span className="px-2.5 py-0.5 text-[10px] font-mono rounded-none bg-[var(--color-neon-cyan)] text-black border-2 border-black uppercase font-semibold shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
                             {lead.role}
                           </span>
-                          <h3 className="font-bold text-white text-base tracking-wide mt-2 uppercase group-hover:text-[var(--color-neon-magenta)] transition-colors">
+                          <h3 className="font-bold text-white text-base tracking-wide mt-2 uppercase group-hover:text-[var(--color-neon-green)] transition-colors">
                             {lead.organization}
                           </h3>
                         </div>
                         <div className="flex flex-col items-start sm:items-end text-xs font-mono text-slate-300 shrink-0 font-bold">
-                          <span className="text-[var(--color-neon-magenta)]">{lead.duration}</span>
+                          <span className="text-[var(--color-neon-green)]">{lead.duration}</span>
                           <span>{lead.location}</span>
                         </div>
                       </div>
@@ -150,7 +150,7 @@ export default function Credentials() {
                       <ul className="space-y-2.5">
                         {lead.details.map((detail, dIdx) => (
                           <li key={dIdx} className="flex gap-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed align-top font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-neon-magenta)] shrink-0 mt-2" />
+                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-neon-green)] shrink-0 mt-2" />
                             <span>{detail}</span>
                           </li>
                         ))}
@@ -165,7 +165,7 @@ export default function Credentials() {
           {/* Right Block: Professional Certifications */}
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-3 select-none">
-              <div className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[var(--color-neon-magenta)] uppercase font-bold">
+              <div className="inline-flex items-center gap-2 text-xs font-mono tracking-widest text-[var(--color-neon-green)] uppercase font-bold">
                 <Award size={14} />
                 <span>Endorsements & Credentials</span>
               </div>
@@ -196,7 +196,7 @@ export default function Credentials() {
                     </h3>
                     <div className="flex items-center gap-2.5 text-[10px] font-mono text-slate-400 font-medium font-semibold">
                       {cert.issuer && <span>Issuer: {cert.issuer}</span>}
-                      {cert.issuer && cert.year && <span className="w-1 h-1 rounded-full bg-[var(--color-neon-magenta)]" />}
+                      {cert.issuer && cert.year && <span className="w-1 h-1 rounded-full bg-[var(--color-neon-green)]" />}
                       {cert.year && <span>{cert.year}</span>}
                     </div>
                   </div>

@@ -21,7 +21,7 @@ export default function Experience() {
   };
 
   const getRoleBadgeColor = (role: string) => {
-    return "bg-[var(--color-neon-magenta)] text-white border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)]";
+    return "bg-[var(--color-neon-cyan)] text-black border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)]";
   };
 
   return (
@@ -61,7 +61,7 @@ export default function Experience() {
               </div>
 
               {/* Main Card */}
-              <div className="rounded-none glass-panel p-6 md:p-8 border-2 border-[var(--color-neon-magenta)] shadow-[8px_8px_0_0_var(--color-neon-magenta)] hover:shadow-[12px_12px_0_0_var(--color-neon-magenta)] transform hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+              <div className="rounded-none glass-panel p-6 md:p-8 border-2 border-[var(--color-neon-green)] shadow-[8px_8px_0_0_var(--color-neon-green)] hover:shadow-[12px_12px_0_0_var(--color-neon-green)] transform hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                   {/* Title & Role Info */}
                   <div className="space-y-2">
@@ -98,7 +98,7 @@ export default function Experience() {
                   {exp.highlights.map((bullet, bulletIdx) => (
                     <li key={bulletIdx} className="flex gap-3 text-slate-200 text-sm leading-relaxed text-left align-top items-start font-sans font-medium">
                       <div className="mt-1 flex-shrink-0">
-                        <CheckCircle2 size={14} className="text-[var(--color-spray-orange)]" />
+                        <CheckCircle2 size={14} className="text-[var(--color-neon-green)]" />
                       </div>
                       <span>{bullet}</span>
                     </li>

@@ -6,14 +6,14 @@ export default function Spotlight() {
   return (
     <section id="identity" className="py-20 md:py-28 relative overflow-hidden border-t border-[rgba(255,255,255,0.05)] bg-[var(--color-wall-dark)]">
       {/* Background radial accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[var(--color-neon-magenta)] rounded-full mix-blend-screen blur-[125px] opacity-10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[var(--color-neon-green)] rounded-full mix-blend-screen blur-[125px] opacity-10 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 md:px-8 w-full relative z-10">
         
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 select-none">
           <div className="text-left space-y-2">
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono text-[var(--color-neon-magenta)] font-bold tracking-widest uppercase">
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono text-[var(--color-neon-green)] font-bold tracking-widest uppercase">
               <User size={13} className="text-[var(--color-acid-yellow)]" />
               <span>Identity Spotlight</span>
             </div>
@@ -49,22 +49,22 @@ export default function Spotlight() {
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[var(--color-neon-magenta)] to-[var(--color-spray-orange)] flex items-center justify-center text-white shadow-sm">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[var(--color-neon-green)] to-[var(--color-neon-cyan)] flex items-center justify-center text-white shadow-sm">
                     <Instagram size={20} />
                   </div>
-                  <span className="font-mono text-[10px] text-[var(--color-neon-magenta)] border border-[var(--color-neon-magenta)] bg-[var(--color-neon-magenta)]/10 px-2 py-0.5 rounded-full font-bold">
+                  <span className="font-mono text-[10px] text-[var(--color-neon-green)] border border-[var(--color-neon-green)] bg-[var(--color-neon-green)]/10 px-2 py-0.5 rounded-full font-bold">
                     @_yash_3103
                   </span>
                 </div>
 
-                <h3 className="font-display font-bold text-white text-[15px] group-hover:text-[var(--color-neon-magenta)] transition-colors">
+                <h3 className="font-display font-bold text-white text-[15px] group-hover:text-[var(--color-neon-green)] transition-colors">
                   Instagram Platform
                 </h3>
               </div>
 
               <div className="flex items-center justify-between pt-4 border-t border-white/10 text-[11px] font-mono text-slate-400 font-semibold">
-                <span className="flex items-center gap-1 group-hover:text-[var(--color-neon-magenta)] transition-colors">
-                  <Heart size={12} className="text-[var(--color-neon-magenta)] animate-pulse" />
+                <span className="flex items-center gap-1 group-hover:text-[var(--color-neon-green)] transition-colors">
+                  <Heart size={12} className="text-[var(--color-neon-green)] animate-pulse" />
                   <span>Creative Stream</span>
                 </span>
                 <span className="flex items-center gap-1 group-hover:text-white transition-colors">
@@ -118,7 +118,7 @@ export default function Spotlight() {
               <Code size={18} />
             </div>
             <p className="text-xs text-slate-300 font-sans leading-relaxed font-semibold">
-              Let's construct something impactfully beautiful. Reach out to collaborate on <strong className="text-white underline decoration-[var(--color-neon-magenta)]">Media Production</strong> or <strong className="text-[var(--color-neon-cyan)]">Autonomous Agent Systems</strong>.
+              Let's construct something impactfully beautiful. Reach out to collaborate on <strong className="text-white underline decoration-[var(--color-neon-green)]">Media Production</strong> or <strong className="text-[var(--color-neon-cyan)]">Autonomous Agent Systems</strong>.
             </p>
           </div>
 

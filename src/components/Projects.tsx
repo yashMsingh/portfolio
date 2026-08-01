@@ -86,7 +86,7 @@ function ProjectCard({ project }: { project: typeof resumeData.projects[0] }) {
 
           {/* Impact Callout if present */}
           {impactBullet && (
-            <div className="p-4 rounded-xl bg-black/50 border-2 border-[var(--color-neon-magenta)] space-y-1 shadow-[4px_4px_0_0_var(--color-neon-magenta)]">
+            <div className="p-4 rounded-xl bg-black/50 border-2 border-[var(--color-neon-green)] space-y-1 shadow-[4px_4px_0_0_var(--color-neon-green)]">
               <span className="text-[10px] font-mono font-bold text-[var(--color-neon-cyan)] uppercase tracking-wider block">
                 Performance Metric
               </span>
@@ -100,7 +100,7 @@ function ProjectCard({ project }: { project: typeof resumeData.projects[0] }) {
           <ul className="space-y-3 pt-2">
             {staticBullets.map((bullet, bIdx) => (
               <li key={bIdx} className="flex gap-2.5 text-slate-300 text-xs sm:text-sm leading-relaxed align-top font-sans font-medium">
-                <Check size={14} className="text-[var(--color-neon-magenta)] mt-1 shrink-0 opacity-90" />
+                <Check size={14} className="text-[var(--color-neon-green)] mt-1 shrink-0 opacity-90" />
                 <span>{bullet}</span>
               </li>
             ))}

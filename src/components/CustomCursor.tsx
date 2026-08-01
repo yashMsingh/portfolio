@@ -69,7 +69,7 @@ export default function CustomCursor() {
       <motion.div
         className="absolute inset-0 rounded-full"
         style={{
-          background: "radial-gradient(circle, var(--color-neon-magenta) 0%, transparent 70%)",
+          background: "radial-gradient(circle, var(--color-neon-green) 0%, transparent 70%)",
           filter: "blur(4px)",
         }}
         initial={{ opacity: 0, scale: 0.5 }}

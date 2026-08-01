@@ -54,7 +54,7 @@ export default function Header({ activeSection }: HeaderProps) {
         transition={{ type: "spring", stiffness: 100, damping: 20, delay: 1.5 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? "glass-panel rounded-none border-b-2 border-b-[var(--color-neon-magenta)] py-3 shadow-[0_4px_0_0_rgba(0,0,0,1)] bg-[var(--color-wall-dark)]/95"
+            ? "glass-panel rounded-none border-b-2 border-b-[var(--color-neon-green)] py-3 shadow-[0_4px_0_0_rgba(0,0,0,1)] bg-[var(--color-wall-dark)]/95"
             : "bg-transparent py-5"
         }`}
       >
@@ -64,7 +64,7 @@ export default function Header({ activeSection }: HeaderProps) {
             <div className="hidden md:flex items-center shrink-0">
               <button
                 onClick={() => scrollToSection("overview")}
-                className="flex items-center gap-2 px-3.5 h-10 bg-black border-2 border-[var(--color-neon-magenta)] text-white font-extrabold text-xs tracking-widest uppercase shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:bg-[var(--color-neon-magenta)] hover:text-black transition-all cursor-pointer"
+                className="flex items-center gap-2 px-3.5 h-10 bg-black border-2 border-[var(--color-neon-green)] text-white font-extrabold text-xs tracking-widest uppercase shadow-[3px_3px_0_0_rgba(0,0,0,1)] hover:bg-[var(--color-neon-green)] hover:text-black transition-all cursor-pointer"
               >
                 <span className="text-[var(--color-acid-yellow)]">YKS</span>
                 <span className="text-[10px] text-slate-400 font-mono">PORTFOLIO</span>
@@ -152,9 +152,9 @@ export default function Header({ activeSection }: HeaderProps) {
               <Magnetic intensity={0.1}>
                 <a
                   href={`mailto:${resumeData.email}`}
-                  className="h-10 px-5 flex items-center justify-center gap-2 shrink-0 bg-[var(--color-neon-magenta)] text-white hover:bg-[var(--color-deep-purple)] border-2 border-black text-xs uppercase font-extrabold tracking-wider rounded-none shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
+                  className="h-10 px-5 flex items-center justify-center gap-2 shrink-0 bg-[var(--color-neon-green)] text-black hover:bg-[var(--color-deep-purple)] hover:text-white border-2 border-black text-xs uppercase font-extrabold tracking-wider rounded-none shadow-[3px_3px_0_0_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-y-0.5"
                 >
-                  <Mail size={15} className="text-[var(--color-acid-yellow)]" />
+                  <Mail size={15} className="text-black" />
                   <span>Contact</span>
                 </a>
               </Magnetic>
@@ -164,7 +164,7 @@ export default function Header({ activeSection }: HeaderProps) {
             <div className="flex md:hidden items-center gap-2 ml-auto">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="w-10 h-10 flex items-center justify-center shrink-0 text-white hover:text-[var(--color-neon-magenta)] bg-black border-2 border-white rounded-none cursor-pointer transition-colors shadow-[3px_3px_0_0_rgba(0,0,0,1)]"
+                className="w-10 h-10 flex items-center justify-center shrink-0 text-white hover:text-[var(--color-neon-green)] bg-black border-2 border-white rounded-none cursor-pointer transition-colors shadow-[3px_3px_0_0_rgba(0,0,0,1)]"
                 aria-label="Toggle Menu"
               >
                 {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -209,7 +209,7 @@ export default function Header({ activeSection }: HeaderProps) {
                     href={resumeData.github}
                     target="_blank"
                     rel="noreferrer referrer"
-                    className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-[var(--color-neon-magenta)] text-[var(--color-neon-magenta)] hover:bg-[var(--color-neon-magenta)] hover:text-black transition-colors"
+                    className="w-10 h-10 flex items-center justify-center shrink-0 rounded-none bg-black border-2 border-[var(--color-neon-green)] text-[var(--color-neon-green)] hover:bg-[var(--color-neon-green)] hover:text-black transition-colors"
                   >
                     <Github size={18} />
                   </a>

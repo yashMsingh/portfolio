@@ -28,7 +28,7 @@ export default function Footer() {
 
   return (
     <footer id="contact" className="relative pt-20 pb-12 border-t-4 border-black overflow-hidden bg-[var(--color-wall-mid)] font-sans">
-      <div className="absolute inset-0 bg-radial-at-b from-[var(--color-neon-magenta)]/10 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-radial-at-b from-[var(--color-neon-green)]/10 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-4 md:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 text-left mb-16">
@@ -37,7 +37,7 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-8">
             <div className="space-y-4">
               <div className="flex items-center gap-3 select-none">
-                <div className="flex items-center justify-center p-2 rounded-none bg-[var(--color-neon-magenta)] text-white font-bold tracking-wide text-xs border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
+                <div className="flex items-center justify-center p-2 rounded-none bg-[var(--color-neon-green)] text-black font-bold tracking-wide text-xs border-2 border-black shadow-[2px_2px_0_0_rgba(0,0,0,1)]">
                   YKS
                 </div>
                 <h3 className="font-display font-bold text-white text-md tracking-wide uppercase graffiti-heading">
@@ -91,7 +91,7 @@ export default function Footer() {
                 href={resumeData.github}
                 target="_blank"
                 rel="noreferrer referrer"
-                className="p-3 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-magenta)] hover:text-[var(--color-neon-magenta)] transition-all font-mono text-xs flex items-center gap-2 font-bold shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:-translate-y-1"
+                className="p-3 rounded-none bg-black border-2 border-white text-white hover:border-[var(--color-neon-green)] hover:text-[var(--color-neon-green)] transition-all font-mono text-xs flex items-center gap-2 font-bold shadow-[2px_2px_0_0_rgba(0,0,0,1)] hover:-translate-y-1"
               >
                 <Github size={15} />
                 <span>yashMsingh</span>
@@ -141,7 +141,7 @@ export default function Footer() {
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       placeholder="Tony Stark"
-                      className="w-full px-4 py-2.5 rounded-none bg-black border-2 border-white text-white font-semibold text-xs sm:text-sm focus:border-[var(--color-neon-magenta)] focus:outline-none transition-all font-sans"
+                      className="w-full px-4 py-2.5 rounded-none bg-black border-2 border-white text-white font-semibold text-xs sm:text-sm focus:border-[var(--color-neon-green)] focus:outline-none transition-all font-sans"
                     />
                   </div>
                   <div className="space-y-1.5 text-left">
@@ -152,7 +152,7 @@ export default function Footer() {
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       placeholder="tony@starkindustries.com"
-                      className="w-full px-4 py-2.5 rounded-none bg-black border-2 border-white text-white font-semibold text-xs sm:text-sm focus:border-[var(--color-neon-magenta)] focus:outline-none transition-all font-sans"
+                      className="w-full px-4 py-2.5 rounded-none bg-black border-2 border-white text-white font-semibold text-xs sm:text-sm focus:border-[var(--color-neon-green)] focus:outline-none transition-all font-sans"
                     />
                   </div>
                 </div>
@@ -165,7 +165,7 @@ export default function Footer() {
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                     placeholder="Hello Yash! Loved your agent projects. Let's discuss an opportunity..."
-                    className="w-full px-4 py-2.5 rounded-none bg-black border-2 border-white text-white font-semibold text-xs sm:text-sm focus:border-[var(--color-neon-magenta)] focus:outline-none transition-all font-sans resize-none"
+                    className="w-full px-4 py-2.5 rounded-none bg-black border-2 border-white text-white font-semibold text-xs sm:text-sm focus:border-[var(--color-neon-green)] focus:outline-none transition-all font-sans resize-none"
                   />
                 </div>
 
@@ -179,7 +179,7 @@ export default function Footer() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-none bg-[var(--color-neon-magenta)] text-white border-2 border-black font-mono uppercase tracking-widest font-bold hover:bg-[var(--color-deep-purple)] shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-transform hover:translate-y-1 disabled:opacity-50 cursor-pointer"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-5 rounded-none bg-[var(--color-neon-green)] text-black border-2 border-black font-mono uppercase tracking-widest font-bold hover:bg-[var(--color-neon-cyan)] shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-transform hover:translate-y-1 disabled:opacity-50 cursor-pointer"
                 >
                   <Send size={13} />
                   <span>{isSubmitting ? "Processing..." : "Generate email draft"}</span>

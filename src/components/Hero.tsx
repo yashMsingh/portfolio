@@ -27,7 +27,7 @@ function Typewriter({ text }: { text: string }) {
   return (
     <span className="inline-block">
       {displayedText}
-      <span className="inline-block animate-pulse ml-0.5 text-[var(--color-neon-magenta)] select-none font-light">|</span>
+      <span className="inline-block animate-pulse ml-0.5 text-[var(--color-neon-green)] select-none font-light">|</span>
     </span>
   );
 }
@@ -64,7 +64,7 @@ export default function Hero() {
       value: "5",
       label: "Autonomous & AI Projects",
       desc: "Agents, RAG, Blockchain, & NLP",
-      color: "var(--color-neon-magenta)"
+      color: "var(--color-neon-green)"
     },
     {
       value: "9.14",
@@ -97,7 +97,7 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="text-6xl font-display font-extrabold text-white graffiti-hero-text"
             >
-              Y<span className="text-[var(--color-neon-magenta)]">K</span>S
+              Y<span className="text-[var(--color-neon-green)]">K</span>S
             </motion.div>
           </motion.div>
         )}
@@ -121,7 +121,7 @@ export default function Hero() {
                 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight graffiti-hero-text leading-[1.05]"
               >
                 Yash Kumar{" "}
-                <span className="text-[var(--color-neon-magenta)]">
+                <span className="text-[var(--color-neon-cyan)]">
                   Singh
                 </span>
               </motion.h1>
@@ -148,15 +148,15 @@ export default function Hero() {
               className="flex flex-wrap gap-y-3 gap-x-6 text-xs text-white font-mono font-medium"
             >
               <div className="flex items-center gap-2 hover:text-[var(--color-acid-yellow)] transition-colors">
-                <MapPin size={14} className="text-[var(--color-neon-magenta)]" />
+                <MapPin size={14} className="text-[var(--color-neon-green)]" />
                 <span>{resumeData.location}</span>
               </div>
               <a href={`mailto:${resumeData.email}`} className="flex items-center gap-2 hover:text-[var(--color-neon-cyan)] transition-colors">
-                <Mail size={14} className="text-[var(--color-neon-magenta)]" />
+                <Mail size={14} className="text-[var(--color-neon-green)]" />
                 <span>{resumeData.email}</span>
               </a>
               <a href={`tel:${resumeData.phone.replace(/[\s-+]/g, "")}`} className="flex items-center gap-2 hover:text-[var(--color-spray-orange)] transition-colors">
-                <Phone size={14} className="text-[var(--color-neon-magenta)]" />
+                <Phone size={14} className="text-[var(--color-neon-green)]" />
                 <span>{resumeData.phone}</span>
               </a>
             </motion.div>
@@ -169,7 +169,7 @@ export default function Hero() {
                     const el = document.getElementById("projects");
                     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
                   }}
-                  className="spray-reveal flex items-center gap-2 px-6 py-3 rounded-none bg-[var(--color-neon-magenta)] text-white text-xs font-bold tracking-wider uppercase border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-transform hover:translate-y-1 hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)]"
+                  className="spray-reveal flex items-center gap-2 px-6 py-3 rounded-none bg-[var(--color-neon-green)] text-black text-xs font-bold tracking-wider uppercase border-2 border-black shadow-[4px_4px_0_0_rgba(0,0,0,1)] transition-transform hover:translate-y-1 hover:shadow-[2px_2px_0_0_rgba(0,0,0,1)]"
                 >
                   <span>View My Work</span>
                   <ChevronRight size={14} />
@@ -218,7 +218,7 @@ export default function Hero() {
                 className="w-full h-full object-cover grayscale contrast-125 brightness-90 mix-blend-luminosity group-hover:grayscale-0 transition-all duration-700 ease-out select-none"
               />
 
-              <div className="absolute inset-0 bg-[var(--color-neon-magenta)]/20 mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-[var(--color-neon-green)]/20 mix-blend-color opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
           </div>
         </motion.div>
