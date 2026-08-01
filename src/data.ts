@@ -1,13 +1,8 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { ResumeData } from "./types";
 
 export const resumeData: ResumeData = {
   name: "Yash Kumar Singh",
-  title: "AI Engineer | Full-Stack Developer | ML Systems Specialist",
+  title: "AI Engineer | Full-Stack Developer | Data Science",
   email: "singhyash3103@gmail.com",
   phone: "+91 7558697035",
   location: "Pune, Maharashtra 411014",
@@ -23,7 +18,7 @@ export const resumeData: ResumeData = {
       degree: "B.Tech in Artificial Intelligence & Data Science",
       location: "Pune, India",
       duration: "2023 – 2027",
-      cgpa: "CGPA : 9.08",
+      cgpa: "CGPA : 9.14",
       keyCoursework: [
         "Deep Learning",
         "Natural Language Processing",
@@ -55,9 +50,10 @@ export const resumeData: ResumeData = {
       duration: "Jan 2026 – Apr 2026",
       isRemote: true,
       highlights: [
-        "Architecting cutting-edge AI/ML solutions within a production environment, focusing on LLM fine-tuning and deployment.",
-        "Developing intelligent, context-aware systems leveraging multi-agent frameworks to automate complex decision-making processes.",
-        "Collaborating with the core engineering team to optimize inference latency for real-time AI applications."
+        "Architected a deep AI analysis pipeline to upgrade a production RAG system, adding scene-level emotional arc tracking using HuggingFace transformer models (distilroberta-base) across 7 emotions with intensity, valence, and arousal scoring.",
+        "Engineered a character emotion tracking module using spaCy NER and NetworkX, classifying characters into Jungian archetypes and mapping relationship evolution graphs across the full script timeline.",
+        "Designed an external data enrichment pipeline integrating TMDB, OMDb, and IMDbPY APIs with asyncio-based parallel fetching and a cache manager, enabling real-world comparable film benchmarking.",
+        "Developed a genre-specific analysis framework using a factory design pattern, delivering tailored insights across 9 genres (Drama, Thriller, Horror, Sci-Fi, etc.) layered onto the existing RAG retrieval pipeline."
       ]
     },
     {
@@ -119,14 +115,6 @@ export const resumeData: ResumeData = {
       ]
     },
     {
-      title: "RAG-Based PDF Question-Answering System",
-      technologies: ["LangChain", "FAISS", "Llama 3.1", "Gradio"],
-      highlights: [
-        "Developed a semantic chunking pipeline for complex, multi-page PDF documents to minimize context loss in LLM responses.",
-        "Integrated FAISS for vector similarity search, delivering context-aware answers with source citations in under 5 seconds for 100+ page files."
-      ]
-    },
-    {
       title: "EmotionSync: NLP-Based Emotion Recognition",
       technologies: ["PyTorch", "DistilBERT", "Streamlit", "SMOTE"],
       githubUrl: "https://github.com/yashMsingh/emotion-detector",
@@ -145,7 +133,6 @@ export const resumeData: ResumeData = {
       ]
     }
   ],
-
   skills: [
     {
       category: "Languages",
@@ -157,7 +144,7 @@ export const resumeData: ResumeData = {
     },
     {
       category: "Backend",
-      skills: ["FastAPI", "Node.js", "Express.js", ".NET Core", "Flask", "Drizzle ORM"]
+      skills: ["FastAPI", "Node.js", "Express.js", ".NET Core", "Flask", "Next.js"]
     },
     {
       category: "AI/ML",
@@ -165,7 +152,7 @@ export const resumeData: ResumeData = {
     },
     {
       category: "Tools & Cloud",
-      skills: ["Git", "Power BI", "Figma"]
+      skills: ["Docker", "Git", "Power BI", "Figma"]
     }
   ],
   leadership: [

@@ -67,7 +67,7 @@ export default function Hero() {
       color: "var(--color-neon-magenta)"
     },
     {
-      value: "9.08",
+      value: "9.14",
       label: "B.Tech CGPA",
       desc: "AI & Data Science | VIIT Pune",
       color: "var(--color-acid-yellow)"
