@@ -111,6 +111,7 @@ export const resumeData: ResumeData = {
     {
       title: "IntelliNews: AI-Powered Multi-Source News Platform",
       technologies: ["Flask", "LLaMA 3.1", "spaCy", "React"],
+      githubUrl: "https://github.com/kritikadamahe/AI-News-Aggregator",
       highlights: [
         "Built a news ecosystem that ingests data from RSS feeds and YouTube transcripts, utilizing LLaMA 3.1 for high-fidelity summarization.",
         "Integrated entity-protected translation for 4+ regional languages, maintaining an 88% entity fidelity rate.",
